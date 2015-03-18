@@ -1,0 +1,13 @@
+---
+layout:     post
+title:      "Learning from Conflict"
+date:       2014-11-12 12:00:00
+author:     "Ricky Thomas"
+header-img: "img/post-bg-01.jpg"
+---
+
+<p><span style="font-size:3em">I</span>f you were to ask friends of mine who was least likely to be involved in a fight, they would probably say me. It's not that there aren't days where I just want to scream, because everyone has those. But I've always believed that most conflicts come out of some kind of miscommunication. It seems that every time I've seen any kind of altercation, there has been some sort of mix up and it could probably be worked out with words. Honestly, resorting to violence in any situation is unacceptable. Most conflicts can be solved with clear, friendly communication.</p>
+<p>In my work experience there has only been a few times I can think of where there was really any kind of conflict. Most times it's a misunderstanding and can be cleared up quickly. One time in particular things were dragged out for a few days. I won't bore you with the details but just know that I misunderstood directions I had been given, communication was not clear from myself or the other party, we blamed each other. Neither of us were happy with each other but we needed to work it out so I visited my coworkers office. That day I learned a really valuable lesson. In the situation, what happened honestly could have been either parties fault. I would even say that both were equally at fault. I walked in there and I took the blame. I said my piece, apologized for any miscommuncation, made a few jokes, and smiled. We've worked together a few more times since then. See, sometimes it isn't about who did what. Sometimes you just need to take responsibility and get back to work. Being one of the first to jump in and take responsibility can earn you respect in the workplace and in life in general.</p>
+<p>If I could go back and have a do-over with that conflict, I would communicate my issues much more clearly. The issue lasted a few days because we didn't want to talk to each other. I would have tried my best to make things right as quickly as possible.</p>
+<br>
+We can learn a lesson from just about every interaction we share with others. A workplace is a very important environment in our day to day lives and having the ability to clearly communicate and take responsibility is key to a happy work life. Thanks for reading!<br> - Ricky
