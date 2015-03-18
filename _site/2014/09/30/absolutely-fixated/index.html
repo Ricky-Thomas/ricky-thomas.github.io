@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A Professional Blog and Website">
+
+    <title>Absolutely Fixated on Relative Positioning - Ricky Thomas</title>
+
+    <link rel="canonical" href="http://ricky-thomas.github.io/2014/09/30/absolutely-fixated/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Ricky Thomas</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                
+                <li>
+                    <a href="/contact/">Contact</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/post-bg-03.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Absolutely Fixated on Relative Positioning</h1>
+                    
+                    <span class="meta">Posted by Ricky Thomas on September 30, 2014</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<div id="purple-box"></div>
+<p>When I began learning about HTML and CSS, it wasn't long before I began to see all the possible uses. Well, not all of them exactly. The possibilities of HTML and CSS are endless. But in my mind I could see web pages beginning to form. The building blocks of the internet I had been interacting with my entire life had just been revealed to me. I was in awe of the vast sea of knowledge before me and couldn't believe I had never learned any of this before.
+
+In this blog I'll be writing about one particular property that can be given to any HTML element. The position property.
+
+<h3 class="section-heading">Default Static Positioning</h3>
+
+<p>Okay so picture a blank white web page with nothing on it. Not so hard right? The browser window itself has a <strong>STATIC</strong> positioning. That's not so important. What is important is that every element placed inside of that window, unless specified otherwise, also inherits that static positioning. This means that whatever elements you put in that box will start showing up on the top lefthand side with each element below the other.<br />
+  <div id="pic-1"><img src="http://s25.postimg.org/ndkab30zz/static_boxes.png" /></div>
+  <p>See in the image above how the boxes stack up along the lefthand side? Thats because they've just been put into an html document as three individual divisions. With their inherited static positioning from the blank window they line up along the left from the top down. This is important to know because any elements that you put into a division (unless specified otherwise) will have a default positioning of static and enter the document just like this.</p><br />
+
+  <div id="pic-2"><img src="http://s25.postimg.org/qltd1vcnj/static_2.png" /></div>
+To illustrate this in the picture above I've now placed the blue and green boxes inside of the now super sized red box. See how the inner blocks are still stacking up along the top left of the red box? This is because they've still got their untouched static positioning.
+
+
+<h3 class="section-heading">Relative Positioning</h3>
+
+<div id="pic-3"><img src="http://s25.postimg.org/jl5d93avj/relative_1.png" /></div>
+<p>In this picture I've given our red box a <strong>relative</strong> position and a the value "left:200px". See how the box has moved in 200 pixels from the left? This is because by giving that red box a relative position with a following value of "left:200px" the box knows know it's supposed to now live 200 pixels to the left of it's original position. Notice also how the two smaller "child" boxes have moved left WITH the red box. They've still got their <strong>static</strong> positioning but they're coming into existence arranged inside the red box statically as opposed to the browser window.</p> <p>In the next picture, I've given our two small "children" boxes a <strong>relative</strong> position with values of "left:200px" as well. See how they've now moved NOT 200 pixels from the left of the screen, but 200 pixels from the left side of their "parent" div, the red box. This is because giving them a relative position allows them to be moved with top, bottom, left, and right values from their naturally occuring position. Which in this case was statically lined up inside the red box.</p>
+<div id="pic-4"><img src="http://s25.postimg.org/qn3avaehb/relative_2.png" /></div>
+
+<h3 class="section-heading">Absolute Positioning</h3>
+
+<div id="pic-5"><img src="http://s25.postimg.org/538613jkf/absolute_pos.png" /></div>
+
+<p>In this image you can see that our blue box has moved up and is taking over green territory! Well it's doing this because I've told it that it now has an <strong>absolute</strong> position. This means that by giving our blue box the values of "left:100px" and "top:50px" it has now placed itself 100 pixels from the left and 50 pixels from the top of it's PARENT div, the red box. See how it just brazenly covers up the poor green box? Absolute positioning gets in our boxes heads and makes them think they're so much better than their brothers and sisters. The blue box now completely ingnores the flow of elements.</p>
+
+<h3 class="section-heading">Fixed Positioning</h3>
+
+<p>The third and final type of positioning is fixed positioning. You've probably noticed the tiny purple box on the left side of this window. See how the rest of the pages content just flows by next to it? This purple box has been given a fixed position. This allowed me to place it anywhere in the browser window (which it will place itself in relation to using top, left, etc.) and hold it in the position regardless of where the page content goes. Elements with a fixed position just don't give a damn. They're gonna stay put to those spots no matter what.</p>
+
+<p>The positioning of elements in a page was something I spent a large amount of time trying to understand. It is, after all, a fundamental building block of web pages. Once you are able to grasp this though, you can immediately begin to improve the look and feel of your websites. I hope this blog helped you out with any of your CSS positioning woes.<br />Until next time cadets,<br />
+  -Ricky</p>
+</p></p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2014/09/20/never-enough-cooks/" data-toggle="tooltip" data-placement="top" title="Never enough cooks">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2014/10/05/array-of-light/" data-toggle="tooltip" data-placement="top" title="Array of Light">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/jedimindRick">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/arealguysguy">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/ricky-thomas">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Ricky Thomas 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+</body>
+
+</html>

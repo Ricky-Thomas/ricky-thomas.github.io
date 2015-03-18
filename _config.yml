@@ -1,0 +1,17 @@
+# Site settings
+title: Ricky Thomas
+header-img: img/home-bg.jpg
+email: rickythomas.rt@gmail.com
+description: "A Professional Blog and Website"
+baseurl: ""
+url: "http://ricky-thomas.github.io"
+twitter_username: jedimindRick
+github_username:  ricky-thomas
+facebook_username:  arealguysguy
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]

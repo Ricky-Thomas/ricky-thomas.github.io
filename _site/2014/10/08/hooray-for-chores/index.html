@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A Professional Blog and Website">
+
+    <title>Hooray for Classes! - Ricky Thomas</title>
+
+    <link rel="canonical" href="http://ricky-thomas.github.io/2014/10/08/hooray-for-chores/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Ricky Thomas</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                
+                <li>
+                    <a href="/contact/">Contact</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/post-bg-01.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Hooray for Classes!</h1>
+                    
+                    <h2 class="subheading">Boooo chores</h2>
+                    
+                    <span class="meta">Posted by Ricky Thomas on October 8, 2014</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<p><span style="font-size:3em">W</span>hen I was a boy, my sister and I would always argue about who had to do which chores over the weekend. I always wanted to mow the lawn because at age ten the driving lawn mower may as well have been Falcor from "The Neverending Story." It rocked. I absolutely hated doing the dishes, and being the younger child, it seemed that was always my task. I am telling you...somehow...she rigged it! That damn sister of mine! So for this blog I'm going to solve one of my ten year old problems.</p>
+<h3>Creating a ChoreChart Class</h3>
+<p><code>class ChoreChart<br />
+          def initialize<br />
+              @chores = ["sweep", "vacuum", "rake", "dishes", "bathroom", "mow"]<br />
+              @ricky = []<br />
+              @alicia = []<br />
+          end<br />end</code></p>
+<p>So in the above code. We are establishing a new class called 'ChoreChart' and initializing a few instance variables. Those are the words with an '@' at the start of them. These variables can be set and used now throughout any other methods we create in the ChoreChart class. So now, as you can see, we've made two empty arrays (representing myself and my sister) and one array containing six strings representing all of the weekend chores. The next thing that we want is a way to randomly assign three chores each to my sister and I. Let's create a ChoreChart method for this:</p>
+
+<p><code>def assign<br />
+ into_hat = @chores.shuffle<br />
+ @ricky &lt;&lt; into_hat.first(3)<br />
+ @alicia &lt;&lt; into_hat.drop(3)<br />
+end<br /><br /></code></p>
+
+<p>In the method above (which will be included in the class), we shuffle up the chore names in the @chore array and make that into a new array that I've designated as 'into_hat.' Just like putting slips of paper with chores on them into a hat! Then we put the first three chores in the @ricky array and the last three into the @alicia array.</p>
+<p>So now that we have a way to mix up the chores, and split them in a fair and equal manner, we can build one last method to tell us what our chores are for the weekend:</p>
+
+<p><code>def tell<br />
+              @ricky = @ricky.join(", ")<br />
+              puts "Ricky's chores: #{@ricky}."<br />
+              @alicia = @alicia.join(", ")<br />
+              puts "Alicia's chores: #{@alicia}."<br />
+          end<br /><br /></code></p>
+
+<p>In the 'tell' method above, you can see that we turn our new and improved versions of @ricky and @alicia ([random_chore, random_chore, random_chore]) and join all the elements into one long string that we now reset @ricky and @alicia too. Then we print each list to the console with puts.</p>
+<p>Here's the whole class together:</p>
+
+<p><code>class ChoreChart<br />
+          def initialize<br />
+              @chores = ["sweep", "vacuum", "rake", "dishes", "bathroom", "mow"]<br />
+              @ricky = []<br />
+              @alicia = []<br />
+          end<br /><br />
+          def assign<br />
+           into_hat = @chores.shuffle<br />
+           @ricky &lt;&lt; into_hat.first(3)<br />
+           @alicia &lt;&lt; into_hat.drop(3)<br />
+          end<br /><br />
+          def tell<br />
+              @ricky = @ricky.join(", ")<br />
+              puts "Ricky's chores: #{@ricky}."<br />
+              @alicia = @alicia.join(", ")<br />
+              puts "Alicia's chores: #{@alicia}."<br />
+          end<br /><br />
+      end<br /><br /></code></p>
+<p>Now consider running following code:</p>
+
+<p><code>weekend_chores = ChoreChart.new<br />
+  weekend_chores.assign<br />
+  weekend_chores.tell</code></p>
+
+<p>The first line of the above code creates a new instance of our class titled "weekend_chores."</p>
+<p>Next, we call our assign method on weekend_chores so that our instance variables (@ricky and @alicia) are given their chore assignments.</p>
+<p>Finally, we can call our tell method and see printed out lists telling us which chores we have! Wooooooo chores!!!</p>
+
+<p>Can you see how the instance variables we created are used throughout multiple methods in the new class? Also, note that we represent a real world object with ChoreChart. Data structures often can be set up to resemble real world objects. For example, five arrays of five elements each stacked on top of one another looks just like a bingo board!<br />I hope this helps you in your learning and thanks for reading!!<br />-Ricky</p>
+
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2014/10/08/group-love/" data-toggle="tooltip" data-placement="top" title="Group Love">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2014/10/08/recognizing-value/" data-toggle="tooltip" data-placement="top" title="Recognizing Value">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/jedimindRick">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/arealguysguy">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/ricky-thomas">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Ricky Thomas 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+</body>
+
+</html>
