@@ -10,7 +10,7 @@ header-img: "img/post-bg-01.jpg"
 
 <p><span style="font-size:3em">T</span>hus far throughout DevBootcamp my main focus has been on the Ruby programming language. However, this last week I spent a good amount of time with Javascript and began to get a bit of a feel for it. During my studies many things about Javascript seemed to fit right in with the concepts I had already learned in Ruby, but there are definitely many differences. So far many of the differences seem to be syntactic though I'm sure as I continue my studies I will find more and more deviations. In this blog I'm going to look at the differences between Ruby classes and Javascript constructor functions.</p>
 <h3>Ruby Classes</h3>
-<p>In my previous blog <a href="/blog/t5-ruby-classes.html"><em>Booo Chores 10.18.14</em></a>. I discuss in depth how to create classes in Ruby. But for those of you who are just joining us, let's have a bit of review!</p>
+<p>In my previous blog <a href="/2014/10/08/hooray-for-chores"><em>Booo Chores 10.18.14</em></a>. I discuss in depth how to create classes in Ruby. But for those of you who are just joining us, let's have a bit of review!</p>
 
 ~~~~~~~~
   class Blog
