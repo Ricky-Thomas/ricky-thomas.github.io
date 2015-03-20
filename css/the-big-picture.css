@@ -1,0 +1,42 @@
+
+body {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: none;
+}
+
+.full {
+  background: url("../img/splash-bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#welcome {
+  color: rgb(211, 211, 211);
+  font-size: 1.4em;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 25px;
+}
+
+#welcome h1 {
+  color: rgb(244, 244, 244);
+  font-size: 2em;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#welcome h1 span {
+  color: rgb(24, 24, 24);
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#splash-nav {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#splash-nav-bg {
+  background-color: rgb(24, 24, 24);
+}
